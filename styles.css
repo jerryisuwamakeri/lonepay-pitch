@@ -6,6 +6,7 @@ body {
     text-align: center;
     background: #0D0A1D;
     color: #FFFFFF;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Container */
@@ -14,6 +15,7 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -22,6 +24,7 @@ header {
     color: white;
     padding: 40px 20px;
     border-radius: 0 0 15px 15px;
+    text-align: center;
 }
 
 h1 {
@@ -42,6 +45,9 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
 }
 
 .about:hover, .progress:hover, .financials:hover, .invest:hover, .cta:hover {
@@ -62,6 +68,7 @@ h2 {
 .cta {
     background: #6500FE;
     color: white;
+    text-align: center;
 }
 
 .btn {
@@ -85,11 +92,12 @@ h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #6500FE;
-    color: white;
+    background: #FFFFFF;
+    color: #0D0A1D;
     border: none;
-    padding: 10px 15px;
-    font-size: 18px;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 50%;
     display: none;
@@ -98,7 +106,7 @@ h2 {
 }
 
 #scrollUp:hover {
-    background: #4b00c2;
+    background: #E0E0E0;
 }
 
 /* Footer */
@@ -108,11 +116,32 @@ footer {
     padding: 15px;
     border-radius: 15px 15px 0 0;
     margin-top: 30px;
+    text-align: center;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
     header {
         padding: 30px 15px;
+    }
+
+    .about, .progress, .financials, .invest, .cta {
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    #scrollUp {
+        padding: 10px;
+        font-size: 18px;
     }
 }
